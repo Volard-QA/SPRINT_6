@@ -10,5 +10,5 @@ class MainPageLocators:
         return By.XPATH, f'/html/body/div/div/div/div[5]/div[2]/div/div[{question}]'
 
     @staticmethod
-    def answer_number(question):
-        return By.XPATH, f'/html/body/div/div/div/div[5]/div[2]/div/div[{question}]/div[2]'
+    def answer_number(answer):
+        return By.XPATH, f'/html/body/div/div/div/div[5]/div[2]/div/div[{answer}]/div[2]'
