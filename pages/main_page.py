@@ -12,9 +12,9 @@ class MainPage(BasePage):
     def click_order_button_under_delivery_steps_section(self):
        self.click_on_element(MainPageLocators.DELIVERY_STEPS_SECTION_ORDER_BUTTON)
 
-    @allure.step("Ожидание появления заголовка секции Вопросы о важном")
-    def wait_for_title_questions_about_important_things(self):
-        self.wait_element(MainPageLocators.TITLE_OF_SECTION_QUESTIONS_ABOUT_IMPORTANT_THINGS)
+    #@allure.step("Ожидание появления заголовка секции Вопросы о важном")
+    #def wait_for_title_questions_about_important_things(self):
+    #    self.wait_element(MainPageLocators.TITLE_OF_SECTION_QUESTIONS_ABOUT_IMPORTANT_THINGS)
 
     @allure.step("Выбор вопроса в разделе Вопросы о важном на главной странице")
     def click_question_in_questions_about_important_things_section(self, question_number):
