@@ -9,4 +9,4 @@ class TestAnswersForQuestionsInQuestionAboutImportantThingsSection:
     def test_answers_texts(self,driver,answer_number, expected_answer):
         main_page = MainPage(driver)
         main_page.click_question_in_questions_about_important_things_section(answer_number)
-        main_page.check_answer_text_in_question(expected_answer)
+        assert main_page.check_answer_text_in_question(expected_answer,answer_number)
