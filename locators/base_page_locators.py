@@ -5,3 +5,4 @@ class BasePageLocators:
     HEADER_ORDER_BUTTON = (By.CLASS_NAME, 'Button_Button__ra12g')
     HEADER_SCOOTER_LOGO_LINK = (By.XPATH, '//a[@class="Header_LogoScooter__3lsAR" and @href="/"]')
     HEADER_YANDEX_LOGO_LINK = (By.XPATH, '//a[@class="Header_LogoYandex__3TSOI" and @href="//yandex.ru"]')
+    COOKIE_ACCEPT_BUTTON = (By.XPATH, '//button[@class="App_CookieButton__3cvqF" and @id="rcc-confirm-button"]')
