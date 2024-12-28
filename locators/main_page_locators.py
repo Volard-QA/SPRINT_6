@@ -1,8 +1,7 @@
 from selenium.webdriver.common.by import By
 
 class MainPageLocators:
-    HEADER_ORDER_BUTTON = (By.CLASS_NAME, 'Button_Button__ra12g')
-    DELIVERY_STEPS_SECTION_ORDER_BUTTON = (By.CLASS_NAME, 'Button_Button__ra12g Button_Middle__1CSJM')
+
     TEXT_IN_ANSWER = (By.CLASS_NAME, 'accordion__panel')
 
     @staticmethod

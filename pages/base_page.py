@@ -1,6 +1,7 @@
 import allure
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
+from curl import *
 
 class BasePage:
     def __init__(self, driver):
@@ -31,14 +32,17 @@ class BasePage:
         element = self.wait_element(locator, timeout)
         return element.text
 
-    @allure.step("Подождать и проверить, что элемент содержит определенный текст")
-    def wait_for_text_atribut(self, locator,attribute, value, timeout=10):
-        return WebDriverWait(self.driver, timeout).until(
-            EC.text_to_be_present_in_element_attribute(locator, attribute, value)
-        )
+    @allure.step("Ожидание прогрузки главной страницы")
+    def wait_for_main_page_load(self, timeout=10):
+        return WebDriverWait(self.driver, timeout).until(EC.url_to_be(main_site))
 
-    @allure.step("Выбрать одно из значений выпадающего списка")
-    def chose_one_option_of_list(self,locator, option_text, timeout=10):
-        option = WebDriverWait(self.driver, timeout).until(
-            EC.element_to_be_clickable((By.XPATH, f"//div[@class='Dropdown-option' and text()='{option_text}']"))
-        )
+    @allure.step("Ожидание прогрузки страницы оформления заказа")
+    def wait_for_order_page_load(self, timeout=10):
+        return WebDriverWait(self.driver, timeout).until(EC.url_to_be(order_url))
+
+    @allure.step("Ожидание прогрузки страницы Дзен")
+    def wait_for_dzen_page_load(self, timeout=10):
+        WebDriverWait(self.driver, 10).until(EC.number_of_windows_to_be(2))
+        windows = self.driver.window_handles
+        self.driver.switch_to.window(windows[-1])
+        return WebDriverWait(self.driver, timeout).until(EC.url_to_be(dzen_page_url))
