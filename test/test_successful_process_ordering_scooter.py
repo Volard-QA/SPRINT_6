@@ -7,7 +7,7 @@ class TestSuccessfulProcessOrderingScooter:
     @allure.title("Проверка сценария успешного заказа самоката")
     @allure.description("На главной странице кликаем по кнопке Заказать в шапке приложения и заполняем поля формы заказа валидными данными, проверяя в конце, что открылось окно с успешной регистрацией заказа")
     @pytest.mark.parametrize('name, surname, address, phone, comm', data.OrderFields.order_fields)
-    def test_successful_ordering_scooter_flou(self, driver, name, surname, address, phone, comm):
+    def test_successful_ordering_scooter_flow(self, driver, name, surname, address, phone, comm):
         order_page = OrderPage(driver)
         order_page.click_order_button_in_header()
         order_page.fill_data_into_fields_in_for_whom_scooter_form(name, surname, address, phone)
