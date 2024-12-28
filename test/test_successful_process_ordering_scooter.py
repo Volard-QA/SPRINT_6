@@ -13,4 +13,4 @@ class TestSuccessfulProcessOrderingScooter:
         order_page.fill_data_into_fields_in_for_whom_scooter_form(name, surname, address, phone)
         order_page.fill_data_into_fields_in_form_about_rent(comm)
         order_page.click_yes_button_in_submit_order_form()
-        assert order_page.get_title_text_for_order_status_button() == 'Посмотреть статус'
+        assert order_page.check_title_text_for_order_status_button() == 'Посмотреть статус'

@@ -16,5 +16,4 @@ class OrderPageLocators:
     COMM_FIELD = (By.XPATH, '//div[@class="Input_InputContainer__3NykH"]//input[@placeholder="Комментарий для курьера"]')
     ORDER_BUTTON = (By.XPATH, '//div[@class="Order_Buttons__1xGrp"]//button[@class="Button_Button__ra12g Button_Middle__1CSJM"]')
     YES_BUTTON_IN_SUBMIT_ORDER_FORM = (By.XPATH, '//div[@class="Order_Modal__YZ-d3"]//div[@class="Order_Buttons__1xGrp"]//button[@class="Button_Button__ra12g Button_Middle__1CSJM"]')
-    TEXT_IN_ORDER_STATUS_BUTTON = (By.XPATH, '//button[contains(@class, "Button_Button__ra12g Button_Middle__1CSJM") and text() = "Посмотреть статус"]')
-
+    TEXT_IN_ORDER_STATUS_BUTTON = (By.XPATH, '//div[@class="Order_NextButton__1_rCA"]//button[@class="Button_Button__ra12g Button_Middle__1CSJM"][1]')
