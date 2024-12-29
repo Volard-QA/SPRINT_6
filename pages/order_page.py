@@ -53,4 +53,9 @@ class OrderPage(BasePage):
 
     @allure.step("Получение текста кнопки просмотра статуса заказа в окне успешного оформления заказа")
     def check_title_text_for_order_status_button(self):
-        self.get_text_in_element(OrderPageLocators.TEXT_IN_ORDER_STATUS_BUTTON)
+        try:
+            self.wait_element(OrderPageLocators.TEXT_IN_ORDER_STATUS_BUTTON)
+            return self.get_text_in_element(OrderPageLocators.TEXT_IN_ORDER_STATUS_BUTTON)
+        except Exception as e:
+            print(f"Ошибка: {e}")
+            return None
