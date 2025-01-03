@@ -6,8 +6,8 @@ class MainPageLocators:
 
     @staticmethod
     def question_number(question):
-        return By.XPATH, f'/html/body/div/div/div/div[5]/div[2]/div/div[{question}]'
+        return By.XPATH, f'//div[@class="accordion__item"][{question}]'
 
     @staticmethod
     def answer_number(answer):
-        return By.XPATH, f'/html/body/div/div/div/div[5]/div[2]/div/div[{answer}]/div[2]'
+        return By.XPATH, f'//div[@class="accordion__item"][{answer}]/div[@class="accordion__panel"]'
